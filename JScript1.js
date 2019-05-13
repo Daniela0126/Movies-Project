@@ -1,3 +1,5 @@
+/*global $*/ 
+
 $('#searchButton').click(function(){
     var userInput = $('#searchTerm').val();
     var movieInfo = 'http://www.omdbapi.com/?apikey=8e9ded79&s='+ userInput +'';
@@ -6,13 +8,12 @@ $('#searchButton').click(function(){
         url: movieInfo,
         method: 'GET',
         success: function(response){
-            var title= response.Search[0].Title;
+            var title = response.Search[0].Title;
             var moviedSrc = response.Search[0].Poster;
             
-            var movie = 
+            var moviePoster = '<img src=' + moviedSrc + '>';
             
-            $('body').append(movieHtml);
+            $('body').append(moviePoster);
         }
-    }
     })
 });
