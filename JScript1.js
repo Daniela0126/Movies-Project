@@ -1,6 +1,9 @@
-/*global $*/ 
+/* global $ */ 
 
-$('#searchButton').click(function(){
+console.log('hello');
+
+$('.searchButton').click(function(){
+    console.log('hello');
     var userInput = $('#searchTerm').val();
     var movieInfo = 'http://www.omdbapi.com/?apikey=8e9ded79&s='+ userInput +'';
     
@@ -11,9 +14,9 @@ $('#searchButton').click(function(){
             var title = response.Search[0].Title;
             var moviedSrc = response.Search[0].Poster;
             
-            var moviePoster = '<img src=' + moviedSrc + '>';
+            var moviePoster = '<img src="' + moviedSrc + '">';
             
             $('body').append(moviePoster);
         }
-    })
+    });
 });
