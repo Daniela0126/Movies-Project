@@ -1,8 +1,6 @@
 /* global $ */ 
-
-console.log('hello');
-
-$('.searchButton').click(function(){
+$('body').append('<h1>hello</h1>');
+$('#searchButton').click(function(){
     console.log('hello');
     var userInput = $('#searchTerm').val();
     var movieInfo = 'http://www.omdbapi.com/?apikey=8e9ded79&s='+ userInput +'';
