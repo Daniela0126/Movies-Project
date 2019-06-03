@@ -1,9 +1,9 @@
 /* global $ */ 
-$('body').append('<h1>hello</h1>');
-$('#searchButton').click(function(){
+
+$('.searchButton').click(function(){
     console.log('hello');
     var userInput = $('#searchTerm').val();
-    var movieInfo = 'http://www.omdbapi.com/?apikey=8e9ded79&s='+ userInput +'';
+    var movieInfo = 'https://www.omdbapi.com/?apikey=8e9ded79&s='+ userInput +'';
     
     $.ajax({
         url: movieInfo,
@@ -14,7 +14,10 @@ $('#searchButton').click(function(){
             
             var moviePoster = '<img src="' + moviedSrc + '">';
             
+            $('body').append("<h1>" + title + "</h1>");
             $('body').append(moviePoster);
+
+
         }
     });
 });
