@@ -16,14 +16,16 @@ $('.searchButton').click(function(){
             
             
             var moviePoster = '<img src="' + moviedSrc + '">';
-            htmlLines.push("<h1>" + title + "</h1>")
-            htmlLines.push(moviePoster);
+            htmlLines.push("<h3>" + type + "</h3>");
             htmlLines.push("<h3>" + year + "</h3>");
-            htmlLines.push("<h3>" + type + "</h3>")
+            htmlLines.push(moviePoster);
+            htmlLines.push("<h1>" + title + "</h1>")
+
             
-            for( var i = htmlLines.length -1; i => 0; i--) {
-                
-                $('#content').append(htmlLines);
+            $("#content").empty();
+            for( var i = htmlLines.length -1; i >= 0; i--) {
+
+                $('#content').append(htmlLines[i]);
             }
         }
     });
