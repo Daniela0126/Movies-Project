@@ -8,6 +8,9 @@
 }
 html{
     background-image: url("https://ak1.picdn.net/shutterstock/videos/440221/thumb/1.jpg?i10c=img.resize(height:160)"); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
 
 h1{
